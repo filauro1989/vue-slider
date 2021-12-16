@@ -16,6 +16,7 @@ const app = new Vue(
                 'image3.jpg',
                 'image4.jpg'
             ],
+            hover: false,
         },
         methods: {
             next: function () {
