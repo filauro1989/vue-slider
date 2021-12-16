@@ -15,7 +15,7 @@ const app = new Vue(
                 'image2.jpg',
                 'image3.jpg',
                 'image4.jpg'
-            ]
+            ],
         },
         methods: {
             next: function () {
@@ -31,7 +31,10 @@ const app = new Vue(
                 }
             },
             timing: function () {
-                setInterval(this.next, 3000);
+                this.timer = setInterval(this.next, 3000);
+            },
+            stopTimer: function() {
+                clearInterval(this.timer);
             }
         },
         created() {
